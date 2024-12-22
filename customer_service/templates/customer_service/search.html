@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Clientes - Rios del desierto SAS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8 text-center">Búsqueda de Clientes</h1>
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 mb-8">
+            <!-- Formulario de búsqueda -->
+            <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 mb-8">
+                <form id="searchForm" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Tipo de Documento</label>
+                        <select id="documentType" class="w-full border rounded p-2">
+                            <option value="CC">Cédula</option>
+                            <option value="NIT">NIT</option>
+                            <option value="PAS">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Número de Documento</label>
+                        <input type="text" id="documentNumber" 
+                            class="w-full border rounded p-2" required>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+                        Buscar
+                    </button>
+                </form>
+            </div>
+
+            <div class="mt-4 pt-4 border-t">
+                <button 
+                    onclick="downloadLoyaltyReport()" 
+                    class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Descargar Reporte de Fidelización
+                </button>
+            </div>
+        </div>
+
+        <!-- Resultados -->
+        <div id="results" class="hidden max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6">
+            <!-- Los resultados se insertarán aquí dinámicamente -->
+        </div>
+    </div>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

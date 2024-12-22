@@ -1,0 +1,204 @@
+[
+    {
+        "model": "customer_service.documenttype",
+        "pk": 1,
+        "fields": {
+            "name": "Cédula de Ciudadanía",
+            "description": "Documento de identidad colombiano",
+            "is_active": true
+        }
+    },
+    {
+        "model": "customer_service.documenttype",
+        "pk": 2,
+        "fields": {
+            "name": "Pasaporte",
+            "description": "Documento de viaje internacional",
+            "is_active": true
+        }
+    },
+    {
+        "model": "customer_service.customer",
+        "pk": 1,
+        "fields": {
+            "document_type": 1,
+            "document_number": "123456789",
+            "first_name": "Juan",
+            "last_name": "Pérez",
+            "email": "juan.perez@ejemplo.com",
+            "phone": "3001234567",
+            "address": "Calle 123 #45-67",
+            "is_active": true,
+            "created_at": "2024-01-01 00:00:00",
+            "updated_at": "2024-01-01 00:00:00"
+        }
+    },
+    {
+        "model": "customer_service.customer",
+        "pk": 2,
+        "fields": {
+            "document_type": 1,
+            "document_number": "987654321",
+            "first_name": "María",
+            "last_name": "González",
+            "email": "maria.gonzalez@ejemplo.com",
+            "phone": "3109876543",
+            "address": "Carrera 45 #12-34",
+            "is_active": true,
+            "created_at": "2024-01-01 00:00:00",
+            "updated_at": "2024-01-01 00:00:00"
+        }
+    },
+    {
+        "model": "customer_service.customer",
+        "pk": 3,
+        "fields": {
+            "document_type": 2,
+            "document_number": "AB123456",
+            "first_name": "Carlos",
+            "last_name": "Rodríguez",
+            "email": "carlos.rodriguez@ejemplo.com",
+            "phone": "3205555555",
+            "address": "Avenida 67 #89-12",
+            "is_active": true,
+            "created_at": "2024-01-01 00:00:00",
+            "updated_at": "2024-01-01 00:00:00"
+        }
+    },
+    {
+        "model": "customer_service.productcategory",
+        "pk": 1,
+        "fields": {
+            "name": "Electrónicos",
+            "description": "Productos electrónicos y tecnología",
+            "is_active": true
+        }
+    },
+    {
+        "model": "customer_service.productcategory",
+        "pk": 2,
+        "fields": {
+            "name": "Hogar",
+            "description": "Artículos para el hogar",
+            "is_active": true
+        }
+    },
+    {
+        "model": "customer_service.product",
+        "pk": 1,
+        "fields": {
+            "name": "Smartphone Premium",
+            "category": 1,
+            "description": "Teléfono inteligente de última generación",
+            "price": "2500000.00",
+            "is_active": true
+        }
+    },
+    {
+        "model": "customer_service.product",
+        "pk": 2,
+        "fields": {
+            "name": "Laptop Pro",
+            "category": 1,
+            "description": "Laptop profesional de alto rendimiento",
+            "price": "4000000.00",
+            "is_active": true
+        }
+    },
+    {
+        "model": "customer_service.product",
+        "pk": 3,
+        "fields": {
+            "name": "Nevera Inteligente",
+            "category": 2,
+            "description": "Nevera con tecnología smart",
+            "price": "3500000.00",
+            "is_active": true
+        }
+    },
+    {
+        "model": "customer_service.purchase",
+        "pk": 1,
+        "fields": {
+            "customer": 1,
+            "purchase_date": "2024-03-15 14:30:00",
+            "total_amount": "6500000.00",
+            "notes": "Compra de equipos electrónicos"
+        }
+    },
+    {
+        "model": "customer_service.purchase",
+        "pk": 2,
+        "fields": {
+            "customer": 2,
+            "purchase_date": "2024-03-20 16:45:00",
+            "total_amount": "4000000.00",
+            "notes": "Compra de laptop"
+        }
+    },
+    {
+        "model": "customer_service.purchase",
+        "pk": 3,
+        "fields": {
+            "customer": 3,
+            "purchase_date": "2024-03-25 10:15:00",
+            "total_amount": "7500000.00",
+            "notes": "Compra de electrodomésticos y laptop"
+        }
+    },
+    {
+        "model": "customer_service.purchaseitem",
+        "pk": 1,
+        "fields": {
+            "purchase": 1,
+            "product": 1,
+            "quantity": 1,
+            "unit_price": "2500000.00",
+            "subtotal": "2500000.00"
+        }
+    },
+    {
+        "model": "customer_service.purchaseitem",
+        "pk": 2,
+        "fields": {
+            "purchase": 1,
+            "product": 2,
+            "quantity": 1,
+            "unit_price": "4000000.00",
+            "subtotal": "4000000.00"
+        }
+    },
+    {
+        "model": "customer_service.purchaseitem",
+        "pk": 3,
+        "fields": {
+            "purchase": 2,
+            "product": 2,
+            "quantity": 1,
+            "unit_price": "4000000.00",
+            "subtotal": "4000000.00"
+        }
+    },
+    {
+        "model": "customer_service.purchaseitem",
+        "pk": 4,
+        "fields": {
+            "purchase": 3,
+            "product": 2,
+            "quantity": 1,
+            "unit_price": "4000000.00",
+            "subtotal": "4000000.00"
+        }
+    },
+    {
+        "model": "customer_service.purchaseitem",
+        "pk": 5,
+        "fields": {
+            "purchase": 3,
+            "product": 3,
+            "quantity": 1,
+            "unit_price": "3500000.00",
+            "subtotal": "3500000.00"
+        }
+    }
+]
